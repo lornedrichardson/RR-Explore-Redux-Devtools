@@ -1,15 +1,15 @@
-import React, {useState} from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment, incrementByAmount } from './features/counterSlice'
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { decrement, increment, incrementByAmount } from './features/counterSlice';
 
 function Counter() {
-    const count = useSelector((state) => state.counter.value)
-    const dispatch = useDispatch()
-    const [input, setInput] = useState(0)
+    const count = useSelector((state) => state.counter.value);
+    const dispatch = useDispatch();
+    const [input, setInput] = useState(0);
 
     const byAmount = (e) => {
-        e.preventDefault()
-        dispatch(incrementByAmount(Number(input)))
+        e.preventDefault();
+        dispatch(incrementByAmount(Number(input)));
     }
 
     return (
@@ -33,4 +33,4 @@ function Counter() {
     )
 }
 
-export default Counter
+export default Counter;
